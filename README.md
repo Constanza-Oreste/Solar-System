@@ -6,3 +6,5 @@ TO BE ADDED IN FUTURE VERSIONS:
 - An image slider (carousel) for the picture in the main section
 - More sections for moons, asteroids, and others
 - Change the design of the card for the sun
+- Add a night mode
+- Add a Spanish version
