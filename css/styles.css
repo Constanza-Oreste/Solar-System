@@ -1,0 +1,224 @@
+:root{
+    --primary-color: #e8f0ec;
+    --background-color: #151616;
+    --secon-color: #9da2ad;
+    --grey: #f5f5fc;
+    --white: #ffffff;
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    color: unset;
+    text-decoration: none;
+}
+body, html{
+    background-color: var (var(--background-color));
+    scroll-behavior: smooth;
+    position: relative;
+    overflow-x: hidden;
+}
+ /*NAVBAR*/
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: var(--background-color);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.menu-wrap{
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.menu-item{
+    margin-left: 1rem;
+    padding: .5rem 1.5rem;
+    font-weight: 600;
+    color: var(--grey);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.menu-item:hover, .menu-item.active{
+    color: var(--black);
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+}
+/*IMAGE AND TEXT*/
+.img-container{
+    background-image: url(../img/universeBanner.jpg);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.text-container{
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    color: white;
+    height: auto;
+    margin-top: 200px;
+}
+h1{
+    font-size: 5em;
+    font-family: 'Poppins', sans-serif;
+    
+
+}
+/* PLANETS SECTION */
+.planets, .sun{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: #151616;
+    overflow: hidden;
+
+}
+
+.cards{
+    width: 280px;
+    height: 360px;
+    border-radius: 4px;
+    padding: 2rem 1rem;
+    margin: 20px;
+    background: #fff;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.5s ease-in-out;
+}
+ .cards:hover{
+    transform: translateY(20px);
+}
+.cards:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 176, 155, 0.5),  rgba(150, 201, 61, 1));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+
+}
+.cards:hover:before{
+    opacity: 1;
+}
+
+.planetImg {
+    width: 280px;
+    height: 360px;
+    border-radius: 4px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+} 
+
+.cards .contentBx{
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+}
+.cards:hover .contentBx{
+    opacity: 1;
+    transform: translateY(0px);
+
+}
+
+.cards .contentBx h3{
+    margin: 0;
+}
+.cards .contentBx p{
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+.cards .contentBx .btn{
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: #fff;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.cards .contentBx .btn:hover{
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/*FOOTER*/
+footer{
+    width: 100%;
+    background: #151616;
+    font-size: 1rem;
+    color:#fff;
+    display: flex;
+    text-align: end;
+}
+
+
+/*MEDIA QUERIES*/
+@media only screen and (max-width: 920px){
+    .text-container{
+        margin-top: 150px;
+
+    }
+    
+}
+@media only screen and (max-width: 540px){
+    .text-container{
+        margin-top: 200px;
+    }
+    h1{
+        font-size: 3em;
+    }
+    .menu-wrap{
+        flex-direction: column;
+    }
+    .menu{
+        flex-direction: column;
+    }
+}
+
+
